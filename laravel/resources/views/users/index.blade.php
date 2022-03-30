@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Users hehe</h1>
+    <p> Users hehe</p>
+    @foreach($data as $item)
+        <p> {{$item}} </p>
+    @endforeach
 </body>
 </html>
