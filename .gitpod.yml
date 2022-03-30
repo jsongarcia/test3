@@ -3,6 +3,7 @@ image:
   file: .gotpod.Dockerfile
 tasks:
  - init: 'composer create-project laravel/laravel laravel' # runs during prebuild
+ - init: 'composer update'
    command: echo 'start script'
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
