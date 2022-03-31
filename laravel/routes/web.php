@@ -16,7 +16,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('login');
 });
+Route::get('/register', function (){
+    return view('register');
+});
+Route::post('/insertUser', [UserController::class, "insertUser"]);
 
-Route::get("/users", [UserController::class, 'index']);
-
-Route::get("/users/{id}", [UserController::class, 'show']);
+Route::get("/users", [UserController::class, 'users']);

@@ -18,14 +18,12 @@
         </style>
     </head>
     <body class="antialiased">
-        <form method="POST">
+        <h2>Register</h2>
+        <form action="/insertUser" method="post">
+            @csrf 
             Username: <input type="text" placeholder="Username" name="name"><br />
             Password: <input type="password" placeholder="Password" name="pass"><br />
-            <input type="submit" value="Login">
+            <input type="submit" value="Register">
         </form>
-
-        <br />
-        <br />
-        <a href="/register">Register</a>
     </body>
 </html>

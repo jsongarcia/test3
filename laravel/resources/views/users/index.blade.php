@@ -6,9 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <p> Users hehe</p>
-    @foreach($data as $item)
-        <p> {{$item}} </p>
+    <b> Users list:</b>
+    <table border='1px'>
+    <tr>
+        <th> ID </th>
+        <th> Username </th>
+        <th> Password </th>
+    </tr>
+    @foreach($users as $user)
+    <tr>
+        <td> {{$user->ID}} </td>
+        <td> {{$user->Name}} </td>
+        <td> {{$user->Password}} </td>
+    </tr>
     @endforeach
+    </table>
 </body>
 </html>
