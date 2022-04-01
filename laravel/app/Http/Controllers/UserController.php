@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use DB;
 class UserController extends Controller
@@ -19,5 +18,11 @@ class UserController extends Controller
         $pass = $req->input('pass');
         DB::insert("insert into testTable(Name,Password) values(?,?)",[$name,$pass]);
         echo "Inserted $name succesfully<br /><br /><a href='register'>Go back</a>";
+    }
+
+    public function addImage(Request $req){
+        $fileName = time().".".$req->upload->extension();
+        $req->upload->move(public_path('uploads'), $fileName);
+        echo"success";
     }
 }

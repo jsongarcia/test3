@@ -22,3 +22,9 @@ Route::get('/register', function (){
 Route::post('/insertUser', [UserController::class, "insertUser"]);
 
 Route::get("/users", [UserController::class, 'users']);
+
+Route::get("/pics", function(){
+    return view("pictures", ["paths" => public_path('uploads')]);
+});
+
+Route::post("/addImage",[UserController::class, "addImage"]);
